@@ -1,4 +1,4 @@
-
+// Function to Merge two Arrays using Third array
 function mergeArray(arr1, arr2) {
     let arr = []
     for (i = 0; i < arr1.length; i++) {
