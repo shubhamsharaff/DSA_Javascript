@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Array insertion</title>
     <script>
         let arr = [60, 30, 12, 8, 90];
         let newElement = 10;
@@ -24,29 +24,30 @@
         // default array : [60, 30, 12, 8, 90]
         // Updated Array : [60, 30, 10, 12, 8, 90]
         // At position 2 value 10 got added & other elements got shifted by one position
-        function insertElement(){
-        let arr = [60, 30, 12, 8, 90];
-        let position = document.getElementById('position').value
-        let newElement = document.getElementById('element').value
-        newElement = parseInt(newElement); // To convert data into integer
-        console.log(arr)
-        for (let i = arr.length - 1; i >= 0; i--) {
-            if (i >= position) {
-                arr[i + 1] = arr[i]
-                if (i == position) {
-                    arr[i] = newElement
+        function insertElement() {
+            let arr = [60, 30, 12, 8, 90];
+            let position = document.getElementById('position').value
+            let newElement = document.getElementById('element').value
+            newElement = parseInt(newElement); // To convert data into integer
+            console.log(arr)
+            for (let i = arr.length - 1; i >= 0; i--) {
+                if (i >= position) {
+                    arr[i + 1] = arr[i]
+                    if (i == position) {
+                        arr[i] = newElement
+                    }
                 }
             }
-        }
-        console.log(arr)
+            console.log(arr)
         }
     </script>
 </head>
 
 <body>
-    <input id="position" type="'text" placeholder="Enter position to Insert"/><br/><br/>
-    <input id="element" type="'text" placeholder="Enter value to Insert"/><br/><br/>
-    <button onclick="insertElement()">Go</button><br/>
+    <p>Defined array [60, 30, 12, 8, 90] </p>
+    <input id="position" type="'text" placeholder="Enter position to Insert" /><br /><br />
+    <input id="element" type="'text" placeholder="Enter value to Insert" /><br /><br />
+    <button onclick="insertElement()">Go</button><br />
 
 </body>
 
