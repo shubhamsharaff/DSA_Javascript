@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Traversing</title>
+    <script>
+        let arr = [70, 5, 8, 12, 20]
+        // for(let i=0;i<=arr.length-1;i++){
+        //     document.write(`Array Index : ${[i]} Value : ${arr[i]} <br>`)
+        // }
+        // // for(let i=0;i<arr.length;i++){
+        // //     document.write(`Array Index : ${[i]} Value : ${arr[i]} <br>`)
+        // // }
+        function getElement() {
+
+            // document.getElementById('element').value will get the value from text box 
+            let ele = document.getElementById('element').value;
+            if (ele < arr.length && typeof parseInt(ele) === 'number' && ele>=0) {
+
+                alert(arr[ele])
+
+            }
+            else {
+                alert("Please enter valid input")
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <p>Defined array [70, 5, 8, 12, 20] </p>
+    <p>Enter the array index to print the value</p>
+    <input type="text" id="element" />
+    <button onClick="getElement()">Get Element</button>
+
+</body>
+
+</html>
